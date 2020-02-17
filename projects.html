@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+
+        <title>Jacin projects</title>
+    </head>
+    <body>
+        <script src="js/script.js"></script>
+
+        <!-- NAVBAR -->
+        <nav id="main-navbar"  class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Projects</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="hobbies.html">Hobbies</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+          <!-- Table with projects -->
+          <div class="container">
+          <table class="table table-striped" style="margin-top: 40px">
+                <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Role</th>
+                    <th scope="col">Revenue</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">Versus</th>
+                    <td>Clothing ecommerce</td>
+                    <td>Co-founder</td>
+                    <td>+$10k</td>
+                </tr>
+                <tr>
+                    <th scope="row">Tengo Tele</th>
+                    <td>Movie-sharing forum with +5k users</td>
+                    <td>Founder</td>
+                    <td>$10</td>
+                </tr>
+                <tr>
+                    <th scope="row">Pikaband</th>
+                    <td>NFC wristband for kids</td>
+                    <td>Co-founder and CTO</td>
+                    <td>+$40k</td>
+                </tr>
+                <tr>
+                    <th scope="row">Exitoylibertad</th>
+                    <td>Instagram account for entrepreneurs (+50k followers)</td>
+                    <td>Founder</td>
+                    <td>$0</td>
+                </tr>
+                <tr>
+                    <th scope="row">Topy</th>
+                    <td>Saas to monitazie instagram throught affilition</td>
+                    <td>Founder</td>
+                    <td>$50</td>
+                </tr>
+                <tr>
+                    <th scope="row">Komentu</th>
+                    <td>NFC card for 5-star rating in Tripadvisor</td>
+                    <td>Co-founder</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <th scope="row">Flamingueo</th>
+                    <td>Trendy products ecommerce</td>
+                    <td>Co-founder and CMO</td>
+                    <td>+$2M</td>
+                </tr>
+                </tbody>
+            </table>
+            
+            <p class="text-center" style="margin-top:20px"><a class="nameClass"></a> if you are interested in further info. like my education and other projects please check <a href="https://www.linkedin.com/in/jacintofleta/" target="_blank">my LinkedIn.</a></p>    
+           
+            <p class="text-center" style="padding-top: 10px;"><a href="hobbies.html">Go to Hobbies</a> 🏋🏽</p>
+
+        </div>
+
+        <!-- WELCOME -->
+        <div id ="welcomeMessage" class="vertical-center" style="display: none;">
+            <div class="container">
+                <p>Hi <a class="nameClass"></a> how are you? My name is Jacin, thanks for coming. I'm a tech apasionate but I have been working on marketing the last 4 years as the CMO and Co-founder of <a href="https://instagram.com/flamingueo">@Flamingueo</a>. We have achieved great things such as +2M revenue and being supported by Marina de Empresas. I studied Industrial Engineering @ UPV and Entrepreneurship and Leadership @ EDEM and I have being a several entrepreneur with more than +7 fails and a lot of learnings. </p>
+                <p class="text-center" style="padding-top: 10px;">Go to projects -></p>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+    </body>
+
+    <script>
+        window.onload = function() {
+            //We don't want to refresh the page
+            if (this.checkCookie()){
+
+                var nameClass = document.getElementsByClassName('nameClass');
+
+                var name = getCookie("username");
+
+                for(var i=0; i< nameClass.length; i++){
+                    nameClass[i].innerHTML = name;
+                }
+
+            }
+            else{
+                window.location.replace("index.html");
+            }
+            
+        };
+    </script>
+
+</html>

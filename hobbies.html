@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+
+        <title>Jacin Hobbies</title>
+    </head>
+    <body>
+        <script src="js/script.js"></script>
+
+        <!-- NAVBAR -->
+        <nav id="main-navbar"  class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Hobbies</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="projects.html">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+      <!--CARDS-->
+      <div style="margin-top:40px" class ="container">
+        <div class="card-columns">
+          <div class="card">
+            <img class="card-img-top" src="img/crossfitgrauJacin.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Crossfit</h5>
+              <p class="card-text">I have been training 3 days per week during the last 2 years. You can <a href="https://www.notion.so/jacintofleta/Crossfit-217917d0163d492dbb28b54437cff718" target="_blank">see my results</a> here.</p>
+            </div>
+          </div>
+          <div class="card p-3">
+            <blockquote class="blockquote mb-0 card-body">
+              <p>My goal is to find the perfect intersection between marketing and tech.</p>
+              <footer class="blockquote-footer">
+                <small class="text-muted">
+                  Maybe thats called Product Management
+                </small>
+              </footer>
+            </blockquote>
+          </div>
+          <div class="card">
+            <img class="card-img-top" src="img/ClasesJacinto.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Teaching</h5>
+              <p class="card-text">I have teached digital marketing in several Universities (CEU San Pablo, EDEM, Universidad de Alicante, Abat Oliba, ESIC...)</p>
+            </div>
+          </div>
+          <div class="card bg-primary text-white text-center p-3">
+            <blockquote class="blockquote mb-0">
+              <p>I love business and I see them as the most creative and powerful system to solve human problems.</p>
+
+            </blockquote>
+          </div>
+          <div class="card text-center">
+            <div class="card-body">
+              <h5 class="card-title">Learning</h5>
+              <p class="card-text">I'm always completing a course. Currently finishing <a href="https://www.edx.org/course/cs50s-introduction-to-computer-science">CS50 from HarvardX.</a></p>
+              <p class="card-text"><small class="text-muted">Preferred topics: programming and product management.</small></p>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top" src="img/Travel.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Traveling</h5>
+              <p class="card-text">My girlfriend works in a travel company so I travel a lot (+5 countries per year).</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Anime</h5>
+              <p class="card-text">I'm convinced japanese people are the best telling stories. This are the <a href="https://www.notion.so/jacintofleta/8d4be2ceb33a4cbea3b76255d104828e?v=b76b39a1b3ba4854944419088392477e" target="_blank">animes I'm watching right now</a>.</p>
+            </div>
+          </div>
+          <div class="card text-center">
+            <div class="card-body">
+              <h5 class="card-title">Meeting <a class="nameClass"></a></h5>
+              <p class="card-text">If you are reading this maybe you are interested in <a href="contact.html">contacting me</a>.</p>
+            </div>
+          </div>
+        </div>
+        <p class="text-center" style="padding-top: 10px;"><a href="contact.html">Go to contact</a> 📝</p>
+      </div>
+
+       
+
+        
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+    </body>
+
+    <script>
+        window.onload = function() {
+            //We don't want to refresh the page
+            if (this.checkCookie()){
+
+                var nameClass = document.getElementsByClassName('nameClass');
+
+                var name = getCookie("username");
+
+                for(var i=0; i< nameClass.length; i++){
+                    nameClass[i].innerHTML = name;
+                }
+
+            }
+            else{
+                window.location.replace("index.html");
+            }
+            
+        };
+    </script>
+
+</html>

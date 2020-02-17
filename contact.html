@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+
+        <title>Contact Jacin</title>
+    </head>
+    <body>
+        <script src="js/script.js"></script>
+
+        <!-- NAVBAR -->
+        <nav id="main-navbar"  class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Contact</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="projects.html">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="hobbies.html">Hobbies</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+            <!--Contact Buttons-->
+            <div class="container">
+                <div class="text-center">
+                <img src="img/ContactJacin.png" style="width: 120px; padding-top: 40px;">
+                
+                <p style="padding-top: 40px; padding-bottom: 40px;">Lets get in touch <a class="nameClass"></a>! You can contact me by Linkedin (answer in 2-3 days) or by email (answer in 1-2 days).</p>
+                <a href="https://www.linkedin.com/in/jacintofleta/" target="_blank"><button type="button" class="btn btn-primary">LinkedIn</button></a>
+                <a href="mailto:jacintofleta@gmail.com" target="_blank"><button type="button" class="btn btn-danger">Email</button></a>
+            </div>
+
+
+            </div>
+        
+        
+
+   
+    </body>
+
+    <script>
+        window.onload = function() {
+            //We don't want to refresh the page
+            if (this.checkCookie()){
+
+                var nameClass = document.getElementsByClassName('nameClass');
+
+                var name = getCookie("username");
+
+                for(var i=0; i< nameClass.length; i++){
+                    nameClass[i].innerHTML = name;
+                }
+
+            }
+            else{
+                window.location.replace("index.html");
+            }
+            
+        };
+    </script>
+
+</html>
